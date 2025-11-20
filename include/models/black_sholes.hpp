@@ -90,11 +90,16 @@ namespace black_sholes_model
     {
     private:
 
-        double __lastPrice;
+        double __spotPrice;
 
     public:
         
-        OptionCall(double lastPrice, double strike, double timeToExpiration, double sigma, double riskRate);
+        OptionCall(double spotPrice, double strike, double timeToExpiration): 
+        VanillaOption(strike, timeToExpiration),
+        __spotPrice(spotPrice)
+        {
+    
+        };
 
         // Функция выплаты
         double payOff() const override;

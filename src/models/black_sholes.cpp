@@ -84,7 +84,7 @@ std::string BlackScholesModel::getStatus()
 
 double OptionCall::payOff() const
 {
-    return std::max(0.0, __lastPrice - __strike);
+    return std::max(0.0, __spotPrice - __strike);
 }
 
 double OptionCall::calculatePrice(double spot, double strike, double timeToExpiration, BlackScholesModel &bs) const
