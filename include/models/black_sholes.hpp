@@ -43,8 +43,7 @@ namespace black_sholes_model
 
         // Волатильность и безрисковая ставка
         double volatility(double strike, double timeToExpiration) const override;
-        double riskRate(double time) const override;
-        double BlackSholesFormulaCall(double spot, double strike, double timeToExpiration) const;
+        double riskRate(double timeToExpiration) const override;
 
         void colibrateModel() override;
 
@@ -57,10 +56,10 @@ namespace black_sholes_model
     {
     public:
 
-        virtual double calculatePrice(double spot, double strike, double timeToExpiration, BlackScholesModel &bs) const = 0;
-        // virtual double calculateDelta(double spot, double strike, double timeToExpiration, BlackScholesModel &bs)  const = 0;
-        // virtual double calculateGamma(double spot, double strike, double timeToExpiration, BlackScholesModel &bs)  const = 0;
-        // virtual double calculateVega(double spot, double strike, double timeToExpiration, BlackScholesModel &bs) const = 0;
+        virtual double calculatePrice(BlackScholesModel &bs) const = 0;
+        virtual double calculateDelta(BlackScholesModel &bs)  const = 0;
+        virtual double calculateGamma(BlackScholesModel &bs)  const = 0;
+        virtual double calculateVega(BlackScholesModel &bs) const = 0;
 
         // Получение типа опциона
         virtual std::string getType() const = 0;
@@ -72,10 +71,12 @@ namespace black_sholes_model
         
         double __strike;
         double __timeToExpiration;
+        double __spotPrice;
 
     public:
 
-        VanillaOption(double strike, double timeToExpiration):
+        VanillaOption(double spotPrice, double strike, double timeToExpiration):
+        __spotPrice(spotPrice),
         __strike(strike),
         __timeToExpiration(timeToExpiration)
         {
@@ -88,15 +89,10 @@ namespace black_sholes_model
 
     class OptionCall : public VanillaOption
     {
-    private:
-
-        double __spotPrice;
-
     public:
         
         OptionCall(double spotPrice, double strike, double timeToExpiration): 
-        VanillaOption(strike, timeToExpiration),
-        __spotPrice(spotPrice)
+        VanillaOption(spotPrice, strike, timeToExpiration)
         {
     
         };
@@ -105,14 +101,69 @@ namespace black_sholes_model
         double payOff() const override;
 
         // Методы рассчета цен и греков
-        double calculatePrice(double spot, double strike, double timeToExpiration, BlackScholesModel &bs) const override;
-        // double calculateDelta(double spot, double strike, double timeToExpiration, BlackScholesModel &bs) const override;
-        // double calculateGamma(double spot, double strike, double timeToExpiration, BlackScholesModel &bs) const override;
-        // double calculateVega(double spot, double strike, double timeToExpiration, BlackScholesModel &bs) const override;
+        double calculatePrice(BlackScholesModel &bs) const override;
+        double calculateDelta(BlackScholesModel &bs) const override;
+        double calculateGamma(BlackScholesModel &bs) const override;
+        double calculateVega(BlackScholesModel &bs) const override;
         
         // Получение типа опциона
         std::string getType() const override {return "call";}
 
+    };
+
+    class OptionPut : public VanillaOption
+    {
+    public:
+        
+        OptionPut(double spotPrice, double strike, double timeToExpiration): 
+        VanillaOption(spotPrice, strike, timeToExpiration)
+        {
+    
+        };
+
+        // Функция выплаты
+        double payOff() const override;
+
+        // Методы рассчета цен и греков
+        double calculatePrice(BlackScholesModel &bs) const override;
+        double calculateDelta(BlackScholesModel &bs) const override;
+        double calculateGamma(BlackScholesModel &bs) const override;
+        double calculateVega(BlackScholesModel &bs) const override;
+        
+        // Получение типа опциона
+        std::string getType() const override {return "put";}
+
+    };
+
+    class BarrierOption : public Option
+    {
+    private:
+
+        double __spotPrice;
+        double __strike;
+        double __timeToExpiration;
+        double __barrier;
+        std::string __barrierType; // "up-and-out", "down-and-out", "up-and-in", "down-and-in"
+
+        double solvePDE(BlackScholesModel &bs) const;
+
+    public:
+        BarrierOption(double spotPrice, double strike, double timeToExpiration, double barrier, const std::string& type): 
+        __spotPrice(spotPrice),
+        __strike(strike),
+        __timeToExpiration(timeToExpiration),
+        __barrier(barrier), 
+        __barrierType(type) 
+        {
+
+        }
+
+        double calculatePrice(BlackScholesModel &bs) const override;
+        // double calculateDelta(BlackScholesModel &bs) const override;
+        // double calculateGamma(BlackScholesModel &bs) const override;
+        // double calculateVega(BlackScholesModel &bs) const override;
+        
+        std::string getType() const override {return "barrier_" + __barrierType;}
     };
 
 

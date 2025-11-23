@@ -68,11 +68,41 @@ include CMakeFiles/OptionsPricer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/OptionsPricer.dir/flags.make
 
+CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj: CMakeFiles/OptionsPricer.dir/flags.make
+CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj: CMakeFiles/OptionsPricer.dir/includes_CXX.rsp
+CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj: C:/Option\ Pricer/src/market/csv_parser.cpp
+CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj: CMakeFiles/OptionsPricer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj"
+	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj -MF CMakeFiles\OptionsPricer.dir\src\market\csv_parser.cpp.obj.d -o CMakeFiles\OptionsPricer.dir\src\market\csv_parser.cpp.obj -c "C:\Option Pricer\src\market\csv_parser.cpp"
+
+CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.i"
+	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Option Pricer\src\market\csv_parser.cpp" > CMakeFiles\OptionsPricer.dir\src\market\csv_parser.cpp.i
+
+CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.s"
+	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Option Pricer\src\market\csv_parser.cpp" -o CMakeFiles\OptionsPricer.dir\src\market\csv_parser.cpp.s
+
+CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj: CMakeFiles/OptionsPricer.dir/flags.make
+CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj: CMakeFiles/OptionsPricer.dir/includes_CXX.rsp
+CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj: C:/Option\ Pricer/src/market/market_data_loader.cpp
+CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj: CMakeFiles/OptionsPricer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj"
+	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj -MF CMakeFiles\OptionsPricer.dir\src\market\market_data_loader.cpp.obj.d -o CMakeFiles\OptionsPricer.dir\src\market\market_data_loader.cpp.obj -c "C:\Option Pricer\src\market\market_data_loader.cpp"
+
+CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.i"
+	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Option Pricer\src\market\market_data_loader.cpp" > CMakeFiles\OptionsPricer.dir\src\market\market_data_loader.cpp.i
+
+CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.s"
+	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Option Pricer\src\market\market_data_loader.cpp" -o CMakeFiles\OptionsPricer.dir\src\market\market_data_loader.cpp.s
+
 CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj: CMakeFiles/OptionsPricer.dir/flags.make
 CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj: CMakeFiles/OptionsPricer.dir/includes_CXX.rsp
 CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj: C:/Option\ Pricer/src/math/math.cpp
 CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj: CMakeFiles/OptionsPricer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj"
 	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj -MF CMakeFiles\OptionsPricer.dir\src\math\math.cpp.obj.d -o CMakeFiles\OptionsPricer.dir\src\math\math.cpp.obj -c "C:\Option Pricer\src\math\math.cpp"
 
 CMakeFiles/OptionsPricer.dir/src/math/math.cpp.i: cmake_force
@@ -87,7 +117,7 @@ CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj: CMakeFiles/Options
 CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj: CMakeFiles/OptionsPricer.dir/includes_CXX.rsp
 CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj: C:/Option\ Pricer/src/models/black_sholes.cpp
 CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj: CMakeFiles/OptionsPricer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj"
 	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj -MF CMakeFiles\OptionsPricer.dir\src\models\black_sholes.cpp.obj.d -o CMakeFiles\OptionsPricer.dir\src\models\black_sholes.cpp.obj -c "C:\Option Pricer\src\models\black_sholes.cpp"
 
 CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.i: cmake_force
@@ -102,7 +132,7 @@ CMakeFiles/OptionsPricer.dir/main.cpp.obj: CMakeFiles/OptionsPricer.dir/flags.ma
 CMakeFiles/OptionsPricer.dir/main.cpp.obj: CMakeFiles/OptionsPricer.dir/includes_CXX.rsp
 CMakeFiles/OptionsPricer.dir/main.cpp.obj: C:/Option\ Pricer/main.cpp
 CMakeFiles/OptionsPricer.dir/main.cpp.obj: CMakeFiles/OptionsPricer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OptionsPricer.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OptionsPricer.dir/main.cpp.obj"
 	C:\MinGw\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OptionsPricer.dir/main.cpp.obj -MF CMakeFiles\OptionsPricer.dir\main.cpp.obj.d -o CMakeFiles\OptionsPricer.dir\main.cpp.obj -c "C:\Option Pricer\main.cpp"
 
 CMakeFiles/OptionsPricer.dir/main.cpp.i: cmake_force
@@ -115,6 +145,8 @@ CMakeFiles/OptionsPricer.dir/main.cpp.s: cmake_force
 
 # Object files for target OptionsPricer
 OptionsPricer_OBJECTS = \
+"CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj" \
+"CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj" \
 "CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj" \
 "CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj" \
 "CMakeFiles/OptionsPricer.dir/main.cpp.obj"
@@ -122,6 +154,8 @@ OptionsPricer_OBJECTS = \
 # External object files for target OptionsPricer
 OptionsPricer_EXTERNAL_OBJECTS =
 
+OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj
+OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj
 OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj
 OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj
 OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/main.cpp.obj
@@ -129,7 +163,7 @@ OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/build.make
 OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/linkLibs.rsp
 OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/objects1.rsp
 OptionsPricer.exe: CMakeFiles/OptionsPricer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable OptionsPricer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable OptionsPricer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\OptionsPricer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -9,7 +9,7 @@ int main()
     auto data = std::make_shared<MarketData>();
 
     data->ticker = "AAPL";
-    data->spotPrice = 270.21;
+    data->spotPrice = 240.21;
     data->strike = 232.5;
     data->timeToExpiration = 76.0 / 252;
     data->riskFreeRate = 0.04;
@@ -23,6 +23,7 @@ int main()
     std::cout << bs.getStatus() << std::endl;
     std::cout << "Sigma = " << bs.volatility(1, 1) << std::endl;
     std::cout << "Risk Rate = " << bs.riskRate(1) << std::endl;
+    std::cout << "spotPrice = " << data->spotPrice << std::endl;
 
 
     

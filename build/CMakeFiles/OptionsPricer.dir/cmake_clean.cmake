@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/OptionsPricer.dir/main.cpp.obj"
   "CMakeFiles/OptionsPricer.dir/main.cpp.obj.d"
+  "CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj"
+  "CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj.d"
+  "CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj"
+  "CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj.d"
   "CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj"
   "CMakeFiles/OptionsPricer.dir/src/math/math.cpp.obj.d"
   "CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj"

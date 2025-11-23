@@ -152,6 +152,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/market/csv_parser.obj: src/market/csv_parser.cpp.obj
+.PHONY : src/market/csv_parser.obj
+
+# target to build an object file
+src/market/csv_parser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj
+.PHONY : src/market/csv_parser.cpp.obj
+
+src/market/csv_parser.i: src/market/csv_parser.cpp.i
+.PHONY : src/market/csv_parser.i
+
+# target to preprocess a source file
+src/market/csv_parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.i
+.PHONY : src/market/csv_parser.cpp.i
+
+src/market/csv_parser.s: src/market/csv_parser.cpp.s
+.PHONY : src/market/csv_parser.s
+
+# target to generate assembly for a file
+src/market/csv_parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.s
+.PHONY : src/market/csv_parser.cpp.s
+
+src/market/market_data_loader.obj: src/market/market_data_loader.cpp.obj
+.PHONY : src/market/market_data_loader.obj
+
+# target to build an object file
+src/market/market_data_loader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.obj
+.PHONY : src/market/market_data_loader.cpp.obj
+
+src/market/market_data_loader.i: src/market/market_data_loader.cpp.i
+.PHONY : src/market/market_data_loader.i
+
+# target to preprocess a source file
+src/market/market_data_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.i
+.PHONY : src/market/market_data_loader.cpp.i
+
+src/market/market_data_loader.s: src/market/market_data_loader.cpp.s
+.PHONY : src/market/market_data_loader.s
+
+# target to generate assembly for a file
+src/market/market_data_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/src/market/market_data_loader.cpp.s
+.PHONY : src/market/market_data_loader.cpp.s
+
 src/math/math.obj: src/math/math.cpp.obj
 .PHONY : src/math/math.obj
 
@@ -212,6 +260,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/market/csv_parser.obj
+	@echo ... src/market/csv_parser.i
+	@echo ... src/market/csv_parser.s
+	@echo ... src/market/market_data_loader.obj
+	@echo ... src/market/market_data_loader.i
+	@echo ... src/market/market_data_loader.s
 	@echo ... src/math/math.obj
 	@echo ... src/math/math.i
 	@echo ... src/math/math.s

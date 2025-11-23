@@ -80,12 +80,12 @@ clean: CMakeFiles/OptionsPricer.dir/clean
 CMakeFiles/OptionsPricer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OptionsPricer.dir\build.make CMakeFiles/OptionsPricer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=1,2,3,4 "Built target OptionsPricer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Option Pricer\build\CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target OptionsPricer"
 .PHONY : CMakeFiles/OptionsPricer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OptionsPricer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Option Pricer\build\CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Option Pricer\build\CMakeFiles" 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/OptionsPricer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Option Pricer\build\CMakeFiles" 0
 .PHONY : CMakeFiles/OptionsPricer.dir/rule

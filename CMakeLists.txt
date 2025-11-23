@@ -13,6 +13,8 @@ endif()
 include_directories(include)
 
 set(SRC_FILES
+    src/market/csv_parser.cpp
+    src/market/market_data_loader.cpp
     src/math/math.cpp
     src/models/black_sholes.cpp
     main.cpp
