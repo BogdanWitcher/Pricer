@@ -13,6 +13,16 @@ struct MarketData
     double marketPrice;
     double riskFreeRate;
     std::string optionType;
+
+    MarketData(): 
+    spotPrice(0.0), 
+    strike(0.0), 
+    timeToExpiration(0.0), 
+    marketPrice(0.0), 
+    riskFreeRate(0.0) 
+    {
+        
+    }
     
 };
 

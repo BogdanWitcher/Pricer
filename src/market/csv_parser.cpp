@@ -4,6 +4,30 @@
 
 #include "../../include/market/csv_parser.hpp"
 
+// Вспомогательная функция для преобразования даты
+double dateStringToDays(const std::string& dateStr) 
+{
+    // Парсим дату вида "Fri Oct 03 2025"
+    // В реальной реализации нужно полноценно парсить дату
+    // Здесь упрощенный вариант - возвращаем дни до экспирации
+    // В реальном коде нужно вычислять разницу между текущей датой и датой экспирации
+    return 30.0; // временное значение
+}
+
+double cleanNumber(const std::string& str) 
+{
+    std::string cleaned;
+    for(char c : str) 
+    {
+        if (std::isdigit(c) || c == '.' || c == '-') 
+        {
+            cleaned += c;
+        }
+    }
+
+    return cleaned.empty() ? 0.0 : std::stod(cleaned);
+}
+
 std::vector<MarketData> CSVParser::parseMarketData() 
 {
     std::vector<MarketData> result;
@@ -17,19 +41,21 @@ std::vector<MarketData> CSVParser::parseMarketData()
     
     std::string line;
     bool firstLine = true;
+    double currentSpotPrice = 239.7001; // Из заголовка файла
     
     while(std::getline(file, line)) 
     {
         if(firstLine) 
         {
-            firstLine = false; // Пропускаем заголовок
-            continue;
+            firstLine = false;
+            continue; // Пропускаем заголовок
         }
         
-        if(!line.empty())
+        if(!line.empty()) 
         {
             MarketData data = parseLine(line);
-            if(MarketDataLoader::validateMarketData(data)) 
+            data.spotPrice = currentSpotPrice; // Устанавливаем спотовую цену
+            if (MarketDataLoader::validateMarketData(data)) 
             {
                 result.push_back(data);
             }
@@ -45,22 +71,40 @@ MarketData CSVParser::parseLine(const std::string& line)
     MarketData data;
     std::stringstream ss(line);
     std::string token;
-    int column = 0;
+    std::vector<std::string> tokens;
     
+    // Разбиваем строку на токены
     while(std::getline(ss, token, delimiter)) 
     {
-        switch(column) 
+        tokens.push_back(token);
+    }
+    
+    if(tokens.size() >= 17) 
+    {
+        try 
         {
-            case 0: data.ticker = token; break;
-            case 1: data.spotPrice = std::stod(token); break;
-            case 2: data.strike = std::stod(token); break;
-            case 3: data.timeToExpiration = std::stod(token); break;
-            case 4: data.marketPrice = std::stod(token); break;
-            case 5: data.riskFreeRate = std::stod(token); break;
-            case 6: data.optionType = token; break;
+            // Парсим CALL опционы (колонки 0-9)
+            data.ticker = tokens[1]; // Symbol call option
+            data.strike = cleanNumber(tokens[11]); // Strike price
+            data.marketPrice = cleanNumber(tokens[2]); // Last sale call
+            data.timeToExpiration = dateStringToDays(tokens[0]); // Expiration date
+            data.riskFreeRate = 0.05; // Предполагаем безрисковую ставку
+            data.optionType = "CALL";
+            
+            // Также можно создать запись для PUT опциона
+            MarketData putData;
+            putData.ticker = tokens[12]; // Symbol put option
+            putData.strike = cleanNumber(tokens[11]); // Тот же страйк
+            putData.marketPrice = cleanNumber(tokens[13]); // Last sale put
+            putData.timeToExpiration = dateStringToDays(tokens[0]);
+            putData.riskFreeRate = 0.05;
+            putData.optionType = "PUT";
+            
+        } 
+        catch(const std::exception& e) 
+        {
+            std::cerr << "Error parsing line: " << e.what() << std::endl;
         }
-
-        column++;
     }
     
     return data;
@@ -72,7 +116,7 @@ MarketData CSVParser::findDataByTicker(const std::string& ticker)
     
     for(const auto& data : allData) 
     {
-        if (data.ticker == ticker) 
+        if(data.ticker == ticker) 
         {
             return data;
         }

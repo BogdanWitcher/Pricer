@@ -24,8 +24,6 @@ int main()
     std::cout << "Sigma = " << bs.volatility(1, 1) << std::endl;
     std::cout << "Risk Rate = " << bs.riskRate(1) << std::endl;
     std::cout << "spotPrice = " << data->spotPrice << std::endl;
-
-
     
     return 0;
 }
