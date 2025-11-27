@@ -1,3 +1,13 @@
+<div align="center">
+https://img.shields.io/badge/C++-17-blue.svg
+https://img.shields.io/badge/CMake-3.15+-green.svg
+https://img.shields.io/badge/License-MIT-yellow.svg
+https://img.shields.io/badge/Platform-Linux%2520%257C%2520Windows%2520%257C%2520macOS-lightgrey.svg
+
+Профессиональная C++ библиотека для оценки финансовых опционов и анализа рисков 🚀
+
+</div>
+
 ##Option Pricer## - это комплексная C++ библиотека для оценки финансовых деривативов, предоставляющая:
 
  - 📈 Модели ценообразования - классические и современные методы оценки опционов
