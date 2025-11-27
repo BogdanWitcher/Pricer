@@ -125,13 +125,33 @@ CMakeFiles/OptionsPricer.dir/main.cpp.obj: C:/Option\ Pricer/main.cpp \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/shared_ptr_atomic.h \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/atomic_base.h \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/backward/auto_ptr.h \
-  C:/Option\ Pricer/include/models/black_sholes.hpp \
-  C:/Option\ Pricer/include/models/pricing_model.hpp \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/vector \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/vector.tcc \
-  C:/Option\ Pricer/include/market/market_data.hpp
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/iomanip \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/locale \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/ctime \
+  C:/MinGw/include/time.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/time_members.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/messages_members.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/codecvt.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.tcc \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_conv.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/stringfwd.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/codecvt.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/unique_ptr.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/quoted_string.h \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/sstream \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/sstream.tcc \
+  C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/cmath \
+  C:/MinGw/include/math.h \
+  C:/Option\ Pricer/include/models/black_sholes.hpp \
+  C:/Option\ Pricer/include/models/pricing_model.hpp \
+  C:/Option\ Pricer/include/market/market_data.hpp \
+  C:/Option\ Pricer/include/math/numerical_methods.hpp
 
 CMakeFiles/OptionsPricer.dir/src/market/csv_parser.cpp.obj: C:/Option\ Pricer/src/market/csv_parser.cpp \
   C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/iostream \
@@ -527,23 +547,9 @@ CMakeFiles/OptionsPricer.dir/src/models/black_sholes.cpp.obj: C:/Option\ Pricer/
   C:/Option\ Pricer/include/math/numerical_methods.hpp
 
 
-C:/MinGw/include/math.h:
-
 C:/Option\ Pricer/src/math/math.cpp:
 
-C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/sstream.tcc:
-
-C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/sstream:
-
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++io.h:
-
-C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/cmath:
-
-C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/codecvt.h:
-
-C:/Option\ Pricer/include/math/numerical_methods.hpp:
-
-C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/fstream:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/unordered_map:
 
@@ -559,9 +565,39 @@ C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/uniform_int_dist.h:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/algorithm:
 
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/fstream:
+
+C:/Option\ Pricer/include/math/numerical_methods.hpp:
+
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/unordered_map.h:
 
 C:/Option\ Pricer/include/market/market_data.hpp:
+
+C:/Option\ Pricer/include/models/pricing_model.hpp:
+
+C:/MinGw/include/math.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/sstream:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/quoted_string.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_conv.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.tcc:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/cmath:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/codecvt.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/messages_members.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/sstream.tcc:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/time_members.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/ctime:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.h:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/gthr-default.h:
 
@@ -689,6 +725,10 @@ C:/MinGw/include/w32api.h:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/stdarg.h:
 
+C:/Option\ Pricer/include/models/black_sholes.hpp:
+
+C:/MinGw/include/sys/types.h:
+
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/functional_hash.h:
 
 C:/MinGw/include/ctype.h:
@@ -699,17 +739,11 @@ C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/new:
 
 C:/MinGw/include/errno.h:
 
-C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/istream:
-
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/functional:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_classes.h:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/string:
-
-C:/MinGw/include/sys/types.h:
-
-C:/Option\ Pricer/include/models/black_sholes.hpp:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h:
 
@@ -726,6 +760,8 @@ C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_uninitialized.h:
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_function.h:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_construct.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/iomanip:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/backward/binders.h:
 
@@ -827,8 +863,10 @@ C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/functexcept.h:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/ext/aligned_buffer.h:
 
-C:/Option\ Pricer/include/models/pricing_model.hpp:
-
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/streambuf:
 
 C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/istream:
+
+C:/MinGw/lib/gcc/mingw32/6.3.0/include/c++/locale:

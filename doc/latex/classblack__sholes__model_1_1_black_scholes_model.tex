@@ -1,0 +1,193 @@
+\doxysection{black\+\_\+sholes\+\_\+model\+::Black\+Scholes\+Model Class Reference}
+\hypertarget{classblack__sholes__model_1_1_black_scholes_model}{}\label{classblack__sholes__model_1_1_black_scholes_model}\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+
+
+Класс модели Блэка-\/Шоулза для оценки опционов  
+
+
+
+
+{\ttfamily \#include $<$black\+\_\+sholes.\+hpp$>$}
+
+Inheritance diagram for black\+\_\+sholes\+\_\+model\+::Black\+Scholes\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classblack__sholes__model_1_1_black_scholes_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_a2e5c9051c1d27271fd2df8c625a02543}{Black\+Scholes\+Model}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_market_data}{Market\+Data}} $>$ model)
+\begin{DoxyCompactList}\small\item\em Конструктор модели \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_ab5f369bcf8cd330e7f69ca9ff56c72b8}{\texorpdfstring{$\sim$}{\string~}\+Black\+Scholes\+Model}} () override
+\item 
+double \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_abe046b0a9df767eccab4a35f9382ea85}{volatility}} (double strike, double time\+To\+Expiration) const override
+\begin{DoxyCompactList}\small\item\em Расчет волатильности \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_a82adc9beabd0ce213f0dfc1162fbcbfc}{risk\+Rate}} (double time\+To\+Expiration) const override
+\begin{DoxyCompactList}\small\item\em Расчет безрисковой ставки \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_a198ff13d06b2dd0183917abcc358aebe}{colibrate\+Model}} () override
+\begin{DoxyCompactList}\small\item\em Калибровка модели по рыночным данным \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_a9cb93ed139a39a981d8e8eb26b2e8ec1}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Получение статуса модели \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_af4ce432232b9e67d94cb8485af1db789}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Получение имени модели \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_pricing_model}{Pricing\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_pricing_model_ad68e939bed88d5fa44bf81be6c5b331e}{\texorpdfstring{$\sim$}{\string~}\+Pricing\+Model}} ()=default
+\item 
+virtual double \mbox{\hyperlink{class_pricing_model_a0a532b3ae87479ed08f237e33d242c96}{volatility}} (double strike, double time\+To\+Expiration) const =0
+\begin{DoxyCompactList}\small\item\em Расчет волатильности \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_pricing_model_afc6ad1d85764f78d73353b396abb169a}{risk\+Rate}} (double time) const =0
+\begin{DoxyCompactList}\small\item\em Расчет безрисковой ставки \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pricing_model_abdc6c25f7e9b78df6d229f855a61e5be}{colibrate\+Model}} ()=0
+\begin{DoxyCompactList}\small\item\em Калибровка модели по рыночным данным \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_pricing_model_a0d05a03faee168fd0b5fe94bb90c7e73}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Получение имени модели \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_market_data}{Market\+Data}} $>$ \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_a65f374572bb31e411af7b2a84b3f8c40}{\+\_\+\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Рыночные данные для модели \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс модели Блэка-\/Шоулза для оценки опционов 
+
+Реализует методы расчета цен опционов, волатильности, а также калибровку модели по рыночным данным. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_a2e5c9051c1d27271fd2df8c625a02543}\label{classblack__sholes__model_1_1_black_scholes_model_a2e5c9051c1d27271fd2df8c625a02543} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!BlackScholesModel@{BlackScholesModel}}
+\index{BlackScholesModel@{BlackScholesModel}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{BlackScholesModel()}{BlackScholesModel()}}
+{\footnotesize\ttfamily black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model\+::\+Black\+Scholes\+Model (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_market_data}{Market\+Data}} $>$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор модели 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Указатель на рыночные данные \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_ab5f369bcf8cd330e7f69ca9ff56c72b8}\label{classblack__sholes__model_1_1_black_scholes_model_ab5f369bcf8cd330e7f69ca9ff56c72b8} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!````~BlackScholesModel@{\texorpdfstring{$\sim$}{\string~}BlackScholesModel}}
+\index{````~BlackScholesModel@{\texorpdfstring{$\sim$}{\string~}BlackScholesModel}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BlackScholesModel()}{\string~BlackScholesModel()}}
+{\footnotesize\ttfamily black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model\+::\texorpdfstring{$\sim$}{\string~}\+Black\+Scholes\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_a198ff13d06b2dd0183917abcc358aebe}\label{classblack__sholes__model_1_1_black_scholes_model_a198ff13d06b2dd0183917abcc358aebe} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!colibrateModel@{colibrateModel}}
+\index{colibrateModel@{colibrateModel}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{colibrateModel()}{colibrateModel()}}
+{\footnotesize\ttfamily void Black\+Scholes\+Model\+::colibrate\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Калибровка модели по рыночным данным 
+
+
+
+Implements \mbox{\hyperlink{class_pricing_model_abdc6c25f7e9b78df6d229f855a61e5be}{Pricing\+Model}}.
+
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_af4ce432232b9e67d94cb8485af1db789}\label{classblack__sholes__model_1_1_black_scholes_model_af4ce432232b9e67d94cb8485af1db789} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!getName@{getName}}
+\index{getName@{getName}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Получение имени модели 
+
+\begin{DoxyReturn}{Returns}
+\"{}\+Black-\/\+Scholes\"{} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_pricing_model_a0d05a03faee168fd0b5fe94bb90c7e73}{Pricing\+Model}}.
+
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_a9cb93ed139a39a981d8e8eb26b2e8ec1}\label{classblack__sholes__model_1_1_black_scholes_model_a9cb93ed139a39a981d8e8eb26b2e8ec1} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Black\+Scholes\+Model\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Получение статуса модели 
+
+\begin{DoxyReturn}{Returns}
+Строка с статусом модели 
+\end{DoxyReturn}
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_a82adc9beabd0ce213f0dfc1162fbcbfc}\label{classblack__sholes__model_1_1_black_scholes_model_a82adc9beabd0ce213f0dfc1162fbcbfc} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!riskRate@{riskRate}}
+\index{riskRate@{riskRate}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{riskRate()}{riskRate()}}
+{\footnotesize\ttfamily double Black\+Scholes\+Model\+::risk\+Rate (\begin{DoxyParamCaption}\item[{double}]{time\+To\+Expiration }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Расчет безрисковой ставки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+To\+Expiration} & Время до экспирации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Значение безрисковой ставки 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_pricing_model_afc6ad1d85764f78d73353b396abb169a}{Pricing\+Model}}.
+
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_abe046b0a9df767eccab4a35f9382ea85}\label{classblack__sholes__model_1_1_black_scholes_model_abe046b0a9df767eccab4a35f9382ea85} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!volatility@{volatility}}
+\index{volatility@{volatility}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{volatility()}{volatility()}}
+{\footnotesize\ttfamily double Black\+Scholes\+Model\+::volatility (\begin{DoxyParamCaption}\item[{double}]{strike,  }\item[{double}]{time\+To\+Expiration }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Расчет волатильности 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strike} & Цена страйк \\
+\hline
+{\em time\+To\+Expiration} & Время до экспирации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Значение волатильности 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_pricing_model_a0a532b3ae87479ed08f237e33d242c96}{Pricing\+Model}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classblack__sholes__model_1_1_black_scholes_model_a65f374572bb31e411af7b2a84b3f8c40}\label{classblack__sholes__model_1_1_black_scholes_model_a65f374572bb31e411af7b2a84b3f8c40} 
+\index{black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}!\_\_model@{\_\_model}}
+\index{\_\_model@{\_\_model}!black\_sholes\_model::BlackScholesModel@{black\_sholes\_model::BlackScholesModel}}
+\doxysubsubsection{\texorpdfstring{\_\_model}{\_\_model}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_market_data}{Market\+Data}}$>$ black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model\+::\+\_\+\+\_\+model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Рыночные данные для модели 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Option Pricer/include/models/\mbox{\hyperlink{black__sholes_8hpp}{black\+\_\+sholes.\+hpp}}\item 
+C\+:/\+Option Pricer/src/models/\mbox{\hyperlink{black__sholes_8cpp}{black\+\_\+sholes.\+cpp}}\end{DoxyCompactItemize}

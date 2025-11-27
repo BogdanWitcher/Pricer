@@ -1,0 +1,32 @@
+\doxysection{C\+:/\+Option Pricer/include/math/numerical\+\_\+methods.hpp File Reference}
+\hypertarget{numerical__methods_8hpp}{}\label{numerical__methods_8hpp}\index{C:/Option Pricer/include/math/numerical\_methods.hpp@{C:/Option Pricer/include/math/numerical\_methods.hpp}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemath}{math}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{numerical__methods_8hpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespacemath_ad4c2e9634aa79fc616974547b4792eb1}{math\+::standart\+\_\+integral\+\_\+gaussian\+\_\+quadrature}} (double a, double b, int n, double(\texorpdfstring{$\ast$}{*}func)(double))
+\begin{DoxyCompactList}\small\item\em Вычисляет интеграл функции методом Гауссовой квадратуры \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemath_ae75a4a0c979d4788121c7c1122c5ff4a}{math\+::integral}} (double a, double b, int N, int n, double(\texorpdfstring{$\ast$}{*}func)(double), double(\texorpdfstring{$\ast$}{*}integral\+Method)(double, double, int, double(\texorpdfstring{$\ast$}{*})(double)))
+\begin{DoxyCompactList}\small\item\em Вычисляет интеграл функции с использованием указанного метода интегрирования \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemath_aa2c59af022a32b7f066cbe27f6d30612}{math\+::normal\+PDF}} (double x)
+\begin{DoxyCompactList}\small\item\em Вычисляет значение функции плотности стандартного нормального распределения \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemath_a529ff60ddf32aef3476420eb64004b34}{math\+::normal\+CDF}} (double x)
+\begin{DoxyCompactList}\small\item\em Вычисляет значение функции распределения стандартного нормального закона \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{numerical__methods_8hpp_ae71449b1cc6e6250b91f539153a7a0d3}\label{numerical__methods_8hpp_ae71449b1cc6e6250b91f539153a7a0d3} 
+\index{numerical\_methods.hpp@{numerical\_methods.hpp}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!numerical\_methods.hpp@{numerical\_methods.hpp}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
+

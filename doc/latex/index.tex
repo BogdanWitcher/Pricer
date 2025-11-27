@@ -1,0 +1,58 @@
+\chapter{Option Pricer -\/ Документация}
+\hypertarget{index}{}\label{index}\index{Option Pricer -\/ Документация@{Option Pricer -\/ Документация}}
+\hypertarget{index_intro_sec}{}\doxysection{\texorpdfstring{Введение}{Введение}}\label{index_intro_sec}
+Option Pricer -\/ комплексная библиотека для оценки финансовых опционов и анализа рисков. Библиотека предоставляет реализацию классических моделей ценообразования, методов численного анализа и инструментов для работы с рыночными данными.\hypertarget{index_architecture_sec}{}\doxysection{\texorpdfstring{Архитектура библиотеки}{Архитектура библиотеки}}\label{index_architecture_sec}
+Библиотека организована в несколько модулей\+:\hypertarget{index_math_module}{}\doxysubsection{\texorpdfstring{Модуль математических функций}{Модуль математических функций}}\label{index_math_module}
+Содержит функции для\+:
+\begin{DoxyItemize}
+\item Численного интегрирования (метод Гауссовой квадратуры)
+\item Статистических распределений (нормальное распределение)
+\item Финансовых вычислений
+\end{DoxyItemize}
+
+Основные классы и функции\+:
+\begin{DoxyItemize}
+\item \doxylink{namespacemath_ad4c2e9634aa79fc616974547b4792eb1}{math\+::standart\+\_\+integral\+\_\+gaussian\+\_\+quadrature} -\/ интегрирование Гауссовой квадратурой
+\item \doxylink{namespacemath_aa2c59af022a32b7f066cbe27f6d30612}{math\+::normal\+PDF} -\/ плотность нормального распределения
+\item \doxylink{namespacemath_a529ff60ddf32aef3476420eb64004b34}{math\+::normal\+CDF} -\/ функция нормального распределения
+\end{DoxyItemize}\hypertarget{index_market_module}{}\doxysubsection{\texorpdfstring{Модуль рыночных данных}{Модуль рыночных данных}}\label{index_market_module}
+Обеспечивает загрузку и обработку рыночных данных\+:
+\begin{DoxyItemize}
+\item \doxylink{class_c_s_v_parser}{CSVParser} -\/ парсинг CSV файлов с данными по опционам
+\item \doxylink{struct_market_data}{Market\+Data} -\/ структура для хранения параметров опционов
+\item \doxylink{class_market_data_loader}{Market\+Data\+Loader} -\/ абстрактный класс для загрузки данных из различных источников
+\end{DoxyItemize}\hypertarget{index_models_module}{}\doxysubsection{\texorpdfstring{Модуль моделей ценообразования}{Модуль моделей ценообразования}}\label{index_models_module}
+Содержит реализации моделей оценки опционов\+:
+\begin{DoxyItemize}
+\item \doxylink{class_pricing_model}{Pricing\+Model} -\/ абстрактный базовый класс для всех моделей
+\item Black\+Scholes\+Model -\/ классическая модель Блэка-\/Шоулза
+\item Различные типы опционов (Vanilla, Barrier) с расчетом греков
+\end{DoxyItemize}\hypertarget{index_usage_sec}{}\doxysection{\texorpdfstring{Использование}{Использование}}\label{index_usage_sec}
+Пример оценки опциона колл с помощью модели Блэка-\/Шоулза\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{csv__parser_8hpp}{market/csv\_parser.hpp}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}models/black\_scholes.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Загрузка\ рыночных\ данных}}
+\DoxyCodeLine{\mbox{\hyperlink{class_c_s_v_parser}{CSVParser}}\ parser(\textcolor{stringliteral}{"{}options\_data.csv"{}});}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ marketData\ =\ parser.parseMarketData();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Создание\ и\ калибровка\ модели}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ bsModel\ =\ std::make\_shared<black\_sholes\_model::BlackScholesModel>(marketData[0]);}
+\DoxyCodeLine{bsModel-\/>colibrateModel();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Расчет\ цены\ опциона}}
+\DoxyCodeLine{\mbox{\hyperlink{classblack__sholes__model_1_1_option_call}{black\_sholes\_model::OptionCall}}\ callOption(100.0,\ 105.0,\ 0.25);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ price\ =\ callOption.calculatePrice(*bsModel);}
+
+\end{DoxyCode}
+\hypertarget{index_features_sec}{}\doxysection{\texorpdfstring{Основные возможности}{Основные возможности}}\label{index_features_sec}
+
+\begin{DoxyItemize}
+\item Оценка ванильных опционов (колл/пут)
+\item Расчет барьерных опционов
+\item Определение подразумеваемой волатильности
+\item Расчет греков (дельта, гамма, вега)
+\item Загрузка данных из CSV файлов
+\item Модульная архитектура для расширения 
+\end{DoxyItemize}

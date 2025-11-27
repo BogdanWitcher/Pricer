@@ -1,0 +1,133 @@
+\doxysection{black\+\_\+sholes\+\_\+model\+::Vanilla\+Option Class Reference}
+\hypertarget{classblack__sholes__model_1_1_vanilla_option}{}\label{classblack__sholes__model_1_1_vanilla_option}\index{black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}}
+
+
+Базовый класс для ванильных опционов  
+
+
+
+
+{\ttfamily \#include $<$black\+\_\+sholes.\+hpp$>$}
+
+Inheritance diagram for black\+\_\+sholes\+\_\+model\+::Vanilla\+Option\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classblack__sholes__model_1_1_vanilla_option}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classblack__sholes__model_1_1_vanilla_option_a7d82be807a1c60de24d3ddaef1c9c681}{Vanilla\+Option}} (double spot\+Price, double strike, double time\+To\+Expiration)
+\begin{DoxyCompactList}\small\item\em Конструктор ванильного опциона \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_vanilla_option_afe3c9ae96c8abe77f85bbed18e7764c5}{pay\+Off}} () const =0
+\begin{DoxyCompactList}\small\item\em Функция выплаты опциона \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classblack__sholes__model_1_1_option}{black\+\_\+sholes\+\_\+model\+::\+Option}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classblack__sholes__model_1_1_option_a51f3fed10ba5385a52a7843ae8351a28}{\texorpdfstring{$\sim$}{\string~}\+Option}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_a77137d63e5cfd658acf7b495a737eb0d}{calculate\+Price}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет теоретической цены опциона \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_af21db2ddf15da30f0c032f2ac05388d9}{calculate\+Delta}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет дельты опциона \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_a27b329d5a05676fe7b4c27063dbfdb24}{calculate\+Gamma}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет гаммы опциона \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_a86bd54ec53e0df69038a5eba7c369d03}{calculate\+Vega}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет веги опциона \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classblack__sholes__model_1_1_option_acfce2f0763ca80ef489c63a759b8ddb6}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Получение типа опциона \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classblack__sholes__model_1_1_vanilla_option_a5ca5904ca72895929e5d9678b809403d}{\+\_\+\+\_\+strike}}
+\begin{DoxyCompactList}\small\item\em Цена исполнения \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classblack__sholes__model_1_1_vanilla_option_a8a0d25e4e6ef2c07750eda817ed10285}{\+\_\+\+\_\+time\+To\+Expiration}}
+\begin{DoxyCompactList}\small\item\em Время до экспирации \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classblack__sholes__model_1_1_vanilla_option_a761c8568fbc0bbd3b3f22898cde6cb79}{\+\_\+\+\_\+spot\+Price}}
+\begin{DoxyCompactList}\small\item\em Текущая цена базового актива \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс для ванильных опционов 
+
+Содержит общие параметры для опционов колл и пут. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classblack__sholes__model_1_1_vanilla_option_a7d82be807a1c60de24d3ddaef1c9c681}\label{classblack__sholes__model_1_1_vanilla_option_a7d82be807a1c60de24d3ddaef1c9c681} 
+\index{black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}!VanillaOption@{VanillaOption}}
+\index{VanillaOption@{VanillaOption}!black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}}
+\doxysubsubsection{\texorpdfstring{VanillaOption()}{VanillaOption()}}
+{\footnotesize\ttfamily black\+\_\+sholes\+\_\+model\+::\+Vanilla\+Option\+::\+Vanilla\+Option (\begin{DoxyParamCaption}\item[{double}]{spot\+Price,  }\item[{double}]{strike,  }\item[{double}]{time\+To\+Expiration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор ванильного опциона 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spot\+Price} & Цена спот \\
+\hline
+{\em strike} & Цена страйк \\
+\hline
+{\em time\+To\+Expiration} & Время до экспирации \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classblack__sholes__model_1_1_vanilla_option_afe3c9ae96c8abe77f85bbed18e7764c5}\label{classblack__sholes__model_1_1_vanilla_option_afe3c9ae96c8abe77f85bbed18e7764c5} 
+\index{black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}!payOff@{payOff}}
+\index{payOff@{payOff}!black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}}
+\doxysubsubsection{\texorpdfstring{payOff()}{payOff()}}
+{\footnotesize\ttfamily virtual double black\+\_\+sholes\+\_\+model\+::\+Vanilla\+Option\+::pay\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Функция выплаты опциона 
+
+\begin{DoxyReturn}{Returns}
+Выплата при экспирации 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_option_call_a70d1ab6d9d756e7bc6203c57f018a6d9}{black\+\_\+sholes\+\_\+model\+::\+Option\+Call}}, and \mbox{\hyperlink{classblack__sholes__model_1_1_option_put_af88294d1d0eac369b32f4e802d9035af}{black\+\_\+sholes\+\_\+model\+::\+Option\+Put}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classblack__sholes__model_1_1_vanilla_option_a761c8568fbc0bbd3b3f22898cde6cb79}\label{classblack__sholes__model_1_1_vanilla_option_a761c8568fbc0bbd3b3f22898cde6cb79} 
+\index{black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}!\_\_spotPrice@{\_\_spotPrice}}
+\index{\_\_spotPrice@{\_\_spotPrice}!black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}}
+\doxysubsubsection{\texorpdfstring{\_\_spotPrice}{\_\_spotPrice}}
+{\footnotesize\ttfamily double black\+\_\+sholes\+\_\+model\+::\+Vanilla\+Option\+::\+\_\+\+\_\+spot\+Price\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Текущая цена базового актива 
+
+\Hypertarget{classblack__sholes__model_1_1_vanilla_option_a5ca5904ca72895929e5d9678b809403d}\label{classblack__sholes__model_1_1_vanilla_option_a5ca5904ca72895929e5d9678b809403d} 
+\index{black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}!\_\_strike@{\_\_strike}}
+\index{\_\_strike@{\_\_strike}!black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}}
+\doxysubsubsection{\texorpdfstring{\_\_strike}{\_\_strike}}
+{\footnotesize\ttfamily double black\+\_\+sholes\+\_\+model\+::\+Vanilla\+Option\+::\+\_\+\+\_\+strike\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Цена исполнения 
+
+\Hypertarget{classblack__sholes__model_1_1_vanilla_option_a8a0d25e4e6ef2c07750eda817ed10285}\label{classblack__sholes__model_1_1_vanilla_option_a8a0d25e4e6ef2c07750eda817ed10285} 
+\index{black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}!\_\_timeToExpiration@{\_\_timeToExpiration}}
+\index{\_\_timeToExpiration@{\_\_timeToExpiration}!black\_sholes\_model::VanillaOption@{black\_sholes\_model::VanillaOption}}
+\doxysubsubsection{\texorpdfstring{\_\_timeToExpiration}{\_\_timeToExpiration}}
+{\footnotesize\ttfamily double black\+\_\+sholes\+\_\+model\+::\+Vanilla\+Option\+::\+\_\+\+\_\+time\+To\+Expiration\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Время до экспирации 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Option Pricer/include/models/\mbox{\hyperlink{black__sholes_8hpp}{black\+\_\+sholes.\+hpp}}\end{DoxyCompactItemize}

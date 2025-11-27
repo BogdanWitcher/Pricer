@@ -1,0 +1,104 @@
+\doxysection{math Namespace Reference}
+\hypertarget{namespacemath}{}\label{namespacemath}\index{math@{math}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespacemath_ad4c2e9634aa79fc616974547b4792eb1}{standart\+\_\+integral\+\_\+gaussian\+\_\+quadrature}} (double a, double b, int n, double(\texorpdfstring{$\ast$}{*}func)(double))
+\begin{DoxyCompactList}\small\item\em Вычисляет интеграл функции методом Гауссовой квадратуры \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemath_ae75a4a0c979d4788121c7c1122c5ff4a}{integral}} (double a, double b, int N, int n, double(\texorpdfstring{$\ast$}{*}func)(double), double(\texorpdfstring{$\ast$}{*}integral\+Method)(double, double, int, double(\texorpdfstring{$\ast$}{*})(double)))
+\begin{DoxyCompactList}\small\item\em Вычисляет интеграл функции с использованием указанного метода интегрирования \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemath_aa2c59af022a32b7f066cbe27f6d30612}{normal\+PDF}} (double x)
+\begin{DoxyCompactList}\small\item\em Вычисляет значение функции плотности стандартного нормального распределения \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemath_a529ff60ddf32aef3476420eb64004b34}{normal\+CDF}} (double x)
+\begin{DoxyCompactList}\small\item\em Вычисляет значение функции распределения стандартного нормального закона \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemath_ae75a4a0c979d4788121c7c1122c5ff4a}\label{namespacemath_ae75a4a0c979d4788121c7c1122c5ff4a} 
+\index{math@{math}!integral@{integral}}
+\index{integral@{integral}!math@{math}}
+\doxysubsubsection{\texorpdfstring{integral()}{integral()}}
+{\footnotesize\ttfamily double math\+::integral (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{int}]{N,  }\item[{int}]{n,  }\item[{double(\texorpdfstring{$\ast$}{*})(double)}]{func,  }\item[{double(\texorpdfstring{$\ast$}{*})(double, double, int, double(\texorpdfstring{$\ast$}{*})(double))}]{integral\+Method }\end{DoxyParamCaption})}
+
+
+
+Вычисляет интеграл функции с использованием указанного метода интегрирования 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Нижний предел интегрирования \\
+\hline
+{\em b} & Верхний предел интегрирования \\
+\hline
+{\em N} & Количество подинтервалов для разбиения \\
+\hline
+{\em n} & Параметр точности для метода интегрирования (зависит от метода) \\
+\hline
+{\em func} & Указатель на функцию, которую нужно проинтегрировать \\
+\hline
+{\em integral\+Method} & Указатель на функцию метода интегрирования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Результат численного интегрирования 
+\end{DoxyReturn}
+\Hypertarget{namespacemath_a529ff60ddf32aef3476420eb64004b34}\label{namespacemath_a529ff60ddf32aef3476420eb64004b34} 
+\index{math@{math}!normalCDF@{normalCDF}}
+\index{normalCDF@{normalCDF}!math@{math}}
+\doxysubsubsection{\texorpdfstring{normalCDF()}{normalCDF()}}
+{\footnotesize\ttfamily double math\+::normal\+CDF (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Вычисляет значение функции распределения стандартного нормального закона 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Аргумент функции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Вероятность того, что случайная величина примет значение ≤ x 
+\end{DoxyReturn}
+\Hypertarget{namespacemath_aa2c59af022a32b7f066cbe27f6d30612}\label{namespacemath_aa2c59af022a32b7f066cbe27f6d30612} 
+\index{math@{math}!normalPDF@{normalPDF}}
+\index{normalPDF@{normalPDF}!math@{math}}
+\doxysubsubsection{\texorpdfstring{normalPDF()}{normalPDF()}}
+{\footnotesize\ttfamily double math\+::normal\+PDF (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Вычисляет значение функции плотности стандартного нормального распределения 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Аргумент функции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Значение плотности вероятности в точке x 
+\end{DoxyReturn}
+\Hypertarget{namespacemath_ad4c2e9634aa79fc616974547b4792eb1}\label{namespacemath_ad4c2e9634aa79fc616974547b4792eb1} 
+\index{math@{math}!standart\_integral\_gaussian\_quadrature@{standart\_integral\_gaussian\_quadrature}}
+\index{standart\_integral\_gaussian\_quadrature@{standart\_integral\_gaussian\_quadrature}!math@{math}}
+\doxysubsubsection{\texorpdfstring{standart\_integral\_gaussian\_quadrature()}{standart\_integral\_gaussian\_quadrature()}}
+{\footnotesize\ttfamily double math\+::standart\+\_\+integral\+\_\+gaussian\+\_\+quadrature (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{int}]{n,  }\item[{double(\texorpdfstring{$\ast$}{*})(double)}]{func }\end{DoxyParamCaption})}
+
+
+
+Вычисляет интеграл функции методом Гауссовой квадратуры 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Нижний предел интегрирования \\
+\hline
+{\em b} & Верхний предел интегрирования \\
+\hline
+{\em n} & Количество узлов для квадратурной формулы \\
+\hline
+{\em func} & Указатель на функцию, которую нужно проинтегрировать \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Результат численного интегрирования 
+\end{DoxyReturn}

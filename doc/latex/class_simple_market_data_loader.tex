@@ -1,0 +1,100 @@
+\doxysection{Simple\+Market\+Data\+Loader Class Reference}
+\hypertarget{class_simple_market_data_loader}{}\label{class_simple_market_data_loader}\index{SimpleMarketDataLoader@{SimpleMarketDataLoader}}
+Inheritance diagram for Simple\+Market\+Data\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simple_market_data_loader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_simple_market_data_loader_a1da8a74b1cfeeb0468dc761b0f303dc9}{load\+From\+CSV}} (const std\+::string \&filename) override
+\begin{DoxyCompactList}\small\item\em Загрузка данных из CSV файла \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_simple_market_data_loader_ae8dcb21eedb199a603a032cadbb284dd}{load\+From\+API}} (const std\+::string \&symbol) override
+\begin{DoxyCompactList}\small\item\em Загрузка данных через API. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_simple_market_data_loader_ae8ac1ba6322e94cafce4bfffccc72e6a}{load\+Manual\+Input}} () override
+\begin{DoxyCompactList}\small\item\em Загрузка данных через ручной ввод \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_market_data_loader_aff3e202d2a068749a77e84d00ee861b2}{load\+From\+CSV}} (const std\+::string \&filename)=0
+\begin{DoxyCompactList}\small\item\em Загрузка данных из CSV файла \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_market_data_loader_a9348ae038f6176e5f07d9e73749c19ae}{load\+From\+API}} (const std\+::string \&symbol)=0
+\begin{DoxyCompactList}\small\item\em Загрузка данных через API. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_market_data_loader_acd4a51c33832178171065cb01fe6ed69}{load\+Manual\+Input}} ()=0
+\begin{DoxyCompactList}\small\item\em Загрузка данных через ручной ввод \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_market_data_loader}{Market\+Data\+Loader}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_market_data_loader_a3483ae8df0902bb929bd205e239ff12e}{validate\+Market\+Data}} (const \mbox{\hyperlink{struct_market_data}{Market\+Data}} \&data)
+\begin{DoxyCompactList}\small\item\em Валидация рыночных данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_simple_market_data_loader_ae8dcb21eedb199a603a032cadbb284dd}\label{class_simple_market_data_loader_ae8dcb21eedb199a603a032cadbb284dd} 
+\index{SimpleMarketDataLoader@{SimpleMarketDataLoader}!loadFromAPI@{loadFromAPI}}
+\index{loadFromAPI@{loadFromAPI}!SimpleMarketDataLoader@{SimpleMarketDataLoader}}
+\doxysubsubsection{\texorpdfstring{loadFromAPI()}{loadFromAPI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_market_data}{Market\+Data}} Simple\+Market\+Data\+Loader\+::load\+From\+API (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{symbol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Загрузка данных через API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & Символ инструмента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Структура \doxylink{struct_market_data}{Market\+Data} с данными из API 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_market_data_loader_a9348ae038f6176e5f07d9e73749c19ae}{Market\+Data\+Loader}}.
+
+\Hypertarget{class_simple_market_data_loader_a1da8a74b1cfeeb0468dc761b0f303dc9}\label{class_simple_market_data_loader_a1da8a74b1cfeeb0468dc761b0f303dc9} 
+\index{SimpleMarketDataLoader@{SimpleMarketDataLoader}!loadFromCSV@{loadFromCSV}}
+\index{loadFromCSV@{loadFromCSV}!SimpleMarketDataLoader@{SimpleMarketDataLoader}}
+\doxysubsubsection{\texorpdfstring{loadFromCSV()}{loadFromCSV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_market_data}{Market\+Data}} Simple\+Market\+Data\+Loader\+::load\+From\+CSV (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Загрузка данных из CSV файла 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Имя CSV файла \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Структура \doxylink{struct_market_data}{Market\+Data} с загруженными данными 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_market_data_loader_aff3e202d2a068749a77e84d00ee861b2}{Market\+Data\+Loader}}.
+
+\Hypertarget{class_simple_market_data_loader_ae8ac1ba6322e94cafce4bfffccc72e6a}\label{class_simple_market_data_loader_ae8ac1ba6322e94cafce4bfffccc72e6a} 
+\index{SimpleMarketDataLoader@{SimpleMarketDataLoader}!loadManualInput@{loadManualInput}}
+\index{loadManualInput@{loadManualInput}!SimpleMarketDataLoader@{SimpleMarketDataLoader}}
+\doxysubsubsection{\texorpdfstring{loadManualInput()}{loadManualInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_market_data}{Market\+Data}} Simple\+Market\+Data\+Loader\+::load\+Manual\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Загрузка данных через ручной ввод 
+
+\begin{DoxyReturn}{Returns}
+Структура \doxylink{struct_market_data}{Market\+Data} с введенными данными 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_market_data_loader_acd4a51c33832178171065cb01fe6ed69}{Market\+Data\+Loader}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Option Pricer/src/market/\mbox{\hyperlink{market__data__loader_8cpp}{market\+\_\+data\+\_\+loader.\+cpp}}\end{DoxyCompactItemize}

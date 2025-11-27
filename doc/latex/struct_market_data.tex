@@ -1,0 +1,129 @@
+\doxysection{Market\+Data Struct Reference}
+\hypertarget{struct_market_data}{}\label{struct_market_data}\index{MarketData@{MarketData}}
+
+
+Структура для хранения рыночных данных по опционам  
+
+
+
+
+{\ttfamily \#include $<$market\+\_\+data.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_market_data_aed7cef7dd560f28f6e8f0099d2fb7561}{Market\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{struct_market_data_ad74495848533737019ec5461e1421aae}{ticker}}
+\begin{DoxyCompactList}\small\item\em Тикер инструмента \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_market_data_a7b123b1a78f54adb0d1ef9f83e3cdd08}{spot\+Price}}
+\begin{DoxyCompactList}\small\item\em Текущая цена базового актива \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_market_data_a07313196663aeacb552aa6ee2e2b81ba}{strike}}
+\begin{DoxyCompactList}\small\item\em Цена исполнения опциона \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_market_data_a65dd45469a0016e803ce8473ee9a39b6}{time\+To\+Expiration}}
+\begin{DoxyCompactList}\small\item\em Время до экспирации (в годах) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_market_data_a559b152a3d991285ac0e9e38fdeb5950}{market\+Price}}
+\begin{DoxyCompactList}\small\item\em Рыночная цена опциона \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_market_data_adb22cdb732bcc1d49c4e5c52aa1eb42b}{risk\+Free\+Rate}}
+\begin{DoxyCompactList}\small\item\em Безрисковая процентная ставка \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_market_data_a86500b032a77585d010289be62a03cec}{option\+Type}}
+\begin{DoxyCompactList}\small\item\em Тип опциона (\"{}call\"{} или \"{}put\"{}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Структура для хранения рыночных данных по опционам 
+
+Содержит все необходимые параметры для расчета цен опционов по моделям. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_market_data_aed7cef7dd560f28f6e8f0099d2fb7561}\label{struct_market_data_aed7cef7dd560f28f6e8f0099d2fb7561} 
+\index{MarketData@{MarketData}!MarketData@{MarketData}}
+\index{MarketData@{MarketData}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{MarketData()}{MarketData()}}
+{\footnotesize\ttfamily Market\+Data\+::\+Market\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор по умолчанию 
+
+Инициализирует все числовые поля нулевыми значениями 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_market_data_a559b152a3d991285ac0e9e38fdeb5950}\label{struct_market_data_a559b152a3d991285ac0e9e38fdeb5950} 
+\index{MarketData@{MarketData}!marketPrice@{marketPrice}}
+\index{marketPrice@{marketPrice}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{marketPrice}{marketPrice}}
+{\footnotesize\ttfamily double Market\+Data\+::market\+Price}
+
+
+
+Рыночная цена опциона 
+
+\Hypertarget{struct_market_data_a86500b032a77585d010289be62a03cec}\label{struct_market_data_a86500b032a77585d010289be62a03cec} 
+\index{MarketData@{MarketData}!optionType@{optionType}}
+\index{optionType@{optionType}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{optionType}{optionType}}
+{\footnotesize\ttfamily std\+::string Market\+Data\+::option\+Type}
+
+
+
+Тип опциона (\"{}call\"{} или \"{}put\"{}) 
+
+\Hypertarget{struct_market_data_adb22cdb732bcc1d49c4e5c52aa1eb42b}\label{struct_market_data_adb22cdb732bcc1d49c4e5c52aa1eb42b} 
+\index{MarketData@{MarketData}!riskFreeRate@{riskFreeRate}}
+\index{riskFreeRate@{riskFreeRate}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{riskFreeRate}{riskFreeRate}}
+{\footnotesize\ttfamily double Market\+Data\+::risk\+Free\+Rate}
+
+
+
+Безрисковая процентная ставка 
+
+\Hypertarget{struct_market_data_a7b123b1a78f54adb0d1ef9f83e3cdd08}\label{struct_market_data_a7b123b1a78f54adb0d1ef9f83e3cdd08} 
+\index{MarketData@{MarketData}!spotPrice@{spotPrice}}
+\index{spotPrice@{spotPrice}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{spotPrice}{spotPrice}}
+{\footnotesize\ttfamily double Market\+Data\+::spot\+Price}
+
+
+
+Текущая цена базового актива 
+
+\Hypertarget{struct_market_data_a07313196663aeacb552aa6ee2e2b81ba}\label{struct_market_data_a07313196663aeacb552aa6ee2e2b81ba} 
+\index{MarketData@{MarketData}!strike@{strike}}
+\index{strike@{strike}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{strike}{strike}}
+{\footnotesize\ttfamily double Market\+Data\+::strike}
+
+
+
+Цена исполнения опциона 
+
+\Hypertarget{struct_market_data_ad74495848533737019ec5461e1421aae}\label{struct_market_data_ad74495848533737019ec5461e1421aae} 
+\index{MarketData@{MarketData}!ticker@{ticker}}
+\index{ticker@{ticker}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{ticker}{ticker}}
+{\footnotesize\ttfamily std\+::string Market\+Data\+::ticker}
+
+
+
+Тикер инструмента 
+
+\Hypertarget{struct_market_data_a65dd45469a0016e803ce8473ee9a39b6}\label{struct_market_data_a65dd45469a0016e803ce8473ee9a39b6} 
+\index{MarketData@{MarketData}!timeToExpiration@{timeToExpiration}}
+\index{timeToExpiration@{timeToExpiration}!MarketData@{MarketData}}
+\doxysubsubsection{\texorpdfstring{timeToExpiration}{timeToExpiration}}
+{\footnotesize\ttfamily double Market\+Data\+::time\+To\+Expiration}
+
+
+
+Время до экспирации (в годах) 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Option Pricer/include/market/\mbox{\hyperlink{market__data_8hpp}{market\+\_\+data.\+hpp}}\end{DoxyCompactItemize}

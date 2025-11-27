@@ -1,0 +1,129 @@
+\doxysection{CSVParser Class Reference}
+\hypertarget{class_c_s_v_parser}{}\label{class_c_s_v_parser}\index{CSVParser@{CSVParser}}
+
+
+Класс для парсинга CSV файлов с рыночными данными  
+
+
+
+
+{\ttfamily \#include $<$csv\+\_\+parser.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_s_v_parser_a3654be46a6eb267c53b70269c2038e6d}{CSVParser}} (const std\+::string \&file=\"{}\"{}, char delim=\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Конструктор парсера CSV. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_market_data}{Market\+Data}} $>$ \mbox{\hyperlink{class_c_s_v_parser_abf163f8ac9926c82111c0000c00517a6}{parse\+Market\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Парсинг всего CSV файла в вектор \doxylink{struct_market_data}{Market\+Data}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_c_s_v_parser_a83e32a6002eea82d431a17ab00d6af82}{parse\+Line}} (const std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em Парсинг одной строки CSV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_market_data}{Market\+Data}} \mbox{\hyperlink{class_c_s_v_parser_a4a83b447c971ba13e85b098fff6fc0fd}{find\+Data\+By\+Ticker}} (const std\+::string \&ticker)
+\begin{DoxyCompactList}\small\item\em Поиск данных по тикеру в CSV файле \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_s_v_parser_abb2c21e7283533a9ca9c7c1e55a7719e}{set\+Filename}} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Установка имени файла \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_s_v_parser_a62e63b021b57712f3918c68dafed1840}{set\+Delimiter}} (char delim)
+\begin{DoxyCompactList}\small\item\em Установка разделителя \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для парсинга CSV файлов с рыночными данными 
+
+Обеспечивает чтение и обработку данных из CSV файлов, преобразование в структуры \doxylink{struct_market_data}{Market\+Data} и поиск по тикерам. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_s_v_parser_a3654be46a6eb267c53b70269c2038e6d}\label{class_c_s_v_parser_a3654be46a6eb267c53b70269c2038e6d} 
+\index{CSVParser@{CSVParser}!CSVParser@{CSVParser}}
+\index{CSVParser@{CSVParser}!CSVParser@{CSVParser}}
+\doxysubsubsection{\texorpdfstring{CSVParser()}{CSVParser()}}
+{\footnotesize\ttfamily CSVParser\+::\+CSVParser (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file = {\ttfamily \"{}\"{}},  }\item[{char}]{delim = {\ttfamily \textquotesingle{},\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор парсера CSV. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Путь к CSV файлу \\
+\hline
+{\em delim} & Разделитель полей (по умолчанию \textquotesingle{},\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_s_v_parser_a4a83b447c971ba13e85b098fff6fc0fd}\label{class_c_s_v_parser_a4a83b447c971ba13e85b098fff6fc0fd} 
+\index{CSVParser@{CSVParser}!findDataByTicker@{findDataByTicker}}
+\index{findDataByTicker@{findDataByTicker}!CSVParser@{CSVParser}}
+\doxysubsubsection{\texorpdfstring{findDataByTicker()}{findDataByTicker()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_market_data}{Market\+Data}} CSVParser\+::find\+Data\+By\+Ticker (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ticker }\end{DoxyParamCaption})}
+
+
+
+Поиск данных по тикеру в CSV файле 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticker} & Тикер для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Структура \doxylink{struct_market_data}{Market\+Data} с данными по указанному тикеру 
+\end{DoxyReturn}
+\Hypertarget{class_c_s_v_parser_a83e32a6002eea82d431a17ab00d6af82}\label{class_c_s_v_parser_a83e32a6002eea82d431a17ab00d6af82} 
+\index{CSVParser@{CSVParser}!parseLine@{parseLine}}
+\index{parseLine@{parseLine}!CSVParser@{CSVParser}}
+\doxysubsubsection{\texorpdfstring{parseLine()}{parseLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_market_data}{Market\+Data}} CSVParser\+::parse\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})}
+
+
+
+Парсинг одной строки CSV. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Строка для парсинга \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Структура \doxylink{struct_market_data}{Market\+Data} с данными из строки 
+\end{DoxyReturn}
+\Hypertarget{class_c_s_v_parser_abf163f8ac9926c82111c0000c00517a6}\label{class_c_s_v_parser_abf163f8ac9926c82111c0000c00517a6} 
+\index{CSVParser@{CSVParser}!parseMarketData@{parseMarketData}}
+\index{parseMarketData@{parseMarketData}!CSVParser@{CSVParser}}
+\doxysubsubsection{\texorpdfstring{parseMarketData()}{parseMarketData()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_market_data}{Market\+Data}} $>$ CSVParser\+::parse\+Market\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Парсинг всего CSV файла в вектор \doxylink{struct_market_data}{Market\+Data}. 
+
+\begin{DoxyReturn}{Returns}
+Вектор структур \doxylink{struct_market_data}{Market\+Data} со всеми данными из файла 
+\end{DoxyReturn}
+\Hypertarget{class_c_s_v_parser_a62e63b021b57712f3918c68dafed1840}\label{class_c_s_v_parser_a62e63b021b57712f3918c68dafed1840} 
+\index{CSVParser@{CSVParser}!setDelimiter@{setDelimiter}}
+\index{setDelimiter@{setDelimiter}!CSVParser@{CSVParser}}
+\doxysubsubsection{\texorpdfstring{setDelimiter()}{setDelimiter()}}
+{\footnotesize\ttfamily void CSVParser\+::set\+Delimiter (\begin{DoxyParamCaption}\item[{char}]{delim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Установка разделителя 
+
+\Hypertarget{class_c_s_v_parser_abb2c21e7283533a9ca9c7c1e55a7719e}\label{class_c_s_v_parser_abb2c21e7283533a9ca9c7c1e55a7719e} 
+\index{CSVParser@{CSVParser}!setFilename@{setFilename}}
+\index{setFilename@{setFilename}!CSVParser@{CSVParser}}
+\doxysubsubsection{\texorpdfstring{setFilename()}{setFilename()}}
+{\footnotesize\ttfamily void CSVParser\+::set\+Filename (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Установка имени файла 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Option Pricer/include/market/\mbox{\hyperlink{csv__parser_8hpp}{csv\+\_\+parser.\+hpp}}\item 
+C\+:/\+Option Pricer/src/market/\mbox{\hyperlink{csv__parser_8cpp}{csv\+\_\+parser.\+cpp}}\end{DoxyCompactItemize}

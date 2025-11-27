@@ -1,0 +1,42 @@
+\doxysection{csv\+\_\+parser.\+hpp}
+\hypertarget{csv__parser_8hpp_source}{}\label{csv__parser_8hpp_source}\index{C:/Option Pricer/include/market/csv\_parser.hpp@{C:/Option Pricer/include/market/csv\_parser.hpp}}
+\mbox{\hyperlink{csv__parser_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ include/market/csv\_parser.hpp}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{market__data_8hpp}{market\_data.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_s_v_parser}{CSVParser}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ filename;\ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}\ delimiter;\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_c_s_v_parser_a3654be46a6eb267c53b70269c2038e6d}{CSVParser}}(\textcolor{keyword}{const}\ std::string\&\ file\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{char}\ delim\ =\ \textcolor{charliteral}{','}):\ }
+\DoxyCodeLine{00032\ \ \ \ \ filename(file),\ }
+\DoxyCodeLine{00033\ \ \ \ \ delimiter(delim)\ }
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<MarketData>\ \mbox{\hyperlink{class_c_s_v_parser_abf163f8ac9926c82111c0000c00517a6}{parseMarketData}}();}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{struct_market_data}{MarketData}}\ \mbox{\hyperlink{class_c_s_v_parser_a83e32a6002eea82d431a17ab00d6af82}{parseLine}}(\textcolor{keyword}{const}\ std::string\&\ line);}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{struct_market_data}{MarketData}}\ \mbox{\hyperlink{class_c_s_v_parser_a4a83b447c971ba13e85b098fff6fc0fd}{findDataByTicker}}(\textcolor{keyword}{const}\ std::string\&\ ticker);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_v_parser_abb2c21e7283533a9ca9c7c1e55a7719e}{setFilename}}(\textcolor{keyword}{const}\ std::string\&\ file)\ \{filename\ =\ file;\}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_v_parser_a62e63b021b57712f3918c68dafed1840}{setDelimiter}}(\textcolor{keywordtype}{char}\ delim)\ \{delimiter\ =\ delim;\}}
+\DoxyCodeLine{00064\ \};}
+
+\end{DoxyCode}

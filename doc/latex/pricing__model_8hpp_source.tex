@@ -1,0 +1,28 @@
+\doxysection{pricing\+\_\+model.\+hpp}
+\hypertarget{pricing__model_8hpp_source}{}\label{pricing__model_8hpp_source}\index{C:/Option Pricer/include/models/pricing\_model.hpp@{C:/Option Pricer/include/models/pricing\_model.hpp}}
+\mbox{\hyperlink{pricing__model_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ include/models/PricingModel.hpp}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../market/market\_data.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pricing_model}{PricingModel}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_pricing_model_ad68e939bed88d5fa44bf81be6c5b331e}{\string~PricingModel}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pricing_model_a0a532b3ae87479ed08f237e33d242c96}{volatility}}(\textcolor{keywordtype}{double}\ strike,\ \textcolor{keywordtype}{double}\ timeToExpiration)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pricing_model_afc6ad1d85764f78d73353b396abb169a}{riskRate}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pricing_model_abdc6c25f7e9b78df6d229f855a61e5be}{colibrateModel}}()\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_pricing_model_a0d05a03faee168fd0b5fe94bb90c7e73}{getName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

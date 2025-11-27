@@ -302,7 +302,20 @@ double BarrierOption::solvePDE(BlackScholesModel &bs) const
 
 double BarrierOption::calculatePrice(BlackScholesModel &bs) const 
 {
-    // Используем численное решение УРЧП вместо упрощенной формулы
     return solvePDE(bs);
 }
 
+double BarrierOption::calculateDelta(BlackScholesModel &bs) const
+{
+    return 0.0;
+}
+
+double BarrierOption::calculateGamma(BlackScholesModel &bs) const
+{
+    return 0.0;
+}
+
+double BarrierOption::calculateVega(BlackScholesModel &bs) const
+{
+    return 0.0;
+}

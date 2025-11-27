@@ -1,0 +1,129 @@
+\doxysection{Pricing\+Model Class Reference}
+\hypertarget{class_pricing_model}{}\label{class_pricing_model}\index{PricingModel@{PricingModel}}
+
+
+Абстрактный базовый класс для моделей оценки опционов  
+
+
+
+
+{\ttfamily \#include $<$pricing\+\_\+model.\+hpp$>$}
+
+Inheritance diagram for Pricing\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pricing_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_pricing_model_ad68e939bed88d5fa44bf81be6c5b331e}{\texorpdfstring{$\sim$}{\string~}\+Pricing\+Model}} ()=default
+\item 
+virtual double \mbox{\hyperlink{class_pricing_model_a0a532b3ae87479ed08f237e33d242c96}{volatility}} (double strike, double time\+To\+Expiration) const =0
+\begin{DoxyCompactList}\small\item\em Расчет волатильности \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_pricing_model_afc6ad1d85764f78d73353b396abb169a}{risk\+Rate}} (double time) const =0
+\begin{DoxyCompactList}\small\item\em Расчет безрисковой ставки \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pricing_model_abdc6c25f7e9b78df6d229f855a61e5be}{colibrate\+Model}} ()=0
+\begin{DoxyCompactList}\small\item\em Калибровка модели по рыночным данным \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_pricing_model_a0d05a03faee168fd0b5fe94bb90c7e73}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Получение имени модели \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактный базовый класс для моделей оценки опционов 
+
+Определяет общий интерфейс для всех моделей ценообразования, обеспечивая единообразие использования различных моделей. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pricing_model_ad68e939bed88d5fa44bf81be6c5b331e}\label{class_pricing_model_ad68e939bed88d5fa44bf81be6c5b331e} 
+\index{PricingModel@{PricingModel}!````~PricingModel@{\texorpdfstring{$\sim$}{\string~}PricingModel}}
+\index{````~PricingModel@{\texorpdfstring{$\sim$}{\string~}PricingModel}!PricingModel@{PricingModel}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PricingModel()}{\string~PricingModel()}}
+{\footnotesize\ttfamily virtual Pricing\+Model\+::\texorpdfstring{$\sim$}{\string~}\+Pricing\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pricing_model_abdc6c25f7e9b78df6d229f855a61e5be}\label{class_pricing_model_abdc6c25f7e9b78df6d229f855a61e5be} 
+\index{PricingModel@{PricingModel}!colibrateModel@{colibrateModel}}
+\index{colibrateModel@{colibrateModel}!PricingModel@{PricingModel}}
+\doxysubsubsection{\texorpdfstring{colibrateModel()}{colibrateModel()}}
+{\footnotesize\ttfamily virtual void Pricing\+Model\+::colibrate\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Калибровка модели по рыночным данным 
+
+Настройка параметров модели для соответствия наблюдаемым рыночным ценам 
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_a198ff13d06b2dd0183917abcc358aebe}{black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model}}.
+
+\Hypertarget{class_pricing_model_a0d05a03faee168fd0b5fe94bb90c7e73}\label{class_pricing_model_a0d05a03faee168fd0b5fe94bb90c7e73} 
+\index{PricingModel@{PricingModel}!getName@{getName}}
+\index{getName@{getName}!PricingModel@{PricingModel}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string Pricing\+Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Получение имени модели 
+
+\begin{DoxyReturn}{Returns}
+Строка с названием модели 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_af4ce432232b9e67d94cb8485af1db789}{black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model}}.
+
+\Hypertarget{class_pricing_model_afc6ad1d85764f78d73353b396abb169a}\label{class_pricing_model_afc6ad1d85764f78d73353b396abb169a} 
+\index{PricingModel@{PricingModel}!riskRate@{riskRate}}
+\index{riskRate@{riskRate}!PricingModel@{PricingModel}}
+\doxysubsubsection{\texorpdfstring{riskRate()}{riskRate()}}
+{\footnotesize\ttfamily virtual double Pricing\+Model\+::risk\+Rate (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Расчет безрисковой ставки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Время до экспирации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Значение безрисковой ставки 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_a82adc9beabd0ce213f0dfc1162fbcbfc}{black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model}}.
+
+\Hypertarget{class_pricing_model_a0a532b3ae87479ed08f237e33d242c96}\label{class_pricing_model_a0a532b3ae87479ed08f237e33d242c96} 
+\index{PricingModel@{PricingModel}!volatility@{volatility}}
+\index{volatility@{volatility}!PricingModel@{PricingModel}}
+\doxysubsubsection{\texorpdfstring{volatility()}{volatility()}}
+{\footnotesize\ttfamily virtual double Pricing\+Model\+::volatility (\begin{DoxyParamCaption}\item[{double}]{strike,  }\item[{double}]{time\+To\+Expiration }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Расчет волатильности 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strike} & Цена страйк \\
+\hline
+{\em time\+To\+Expiration} & Время до экспирации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Значение волатильности 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model_abe046b0a9df767eccab4a35f9382ea85}{black\+\_\+sholes\+\_\+model\+::\+Black\+Scholes\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Option Pricer/include/models/\mbox{\hyperlink{pricing__model_8hpp}{pricing\+\_\+model.\+hpp}}\end{DoxyCompactItemize}

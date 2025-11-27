@@ -1,0 +1,159 @@
+\doxysection{black\+\_\+sholes\+\_\+model\+::Option Class Reference}
+\hypertarget{classblack__sholes__model_1_1_option}{}\label{classblack__sholes__model_1_1_option}\index{black\_sholes\_model::Option@{black\_sholes\_model::Option}}
+
+
+Абстрактный базовый класс для опционов  
+
+
+
+
+{\ttfamily \#include $<$black\+\_\+sholes.\+hpp$>$}
+
+Inheritance diagram for black\+\_\+sholes\+\_\+model\+::Option\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.592592cm]{classblack__sholes__model_1_1_option}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classblack__sholes__model_1_1_option_a51f3fed10ba5385a52a7843ae8351a28}{\texorpdfstring{$\sim$}{\string~}\+Option}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_a77137d63e5cfd658acf7b495a737eb0d}{calculate\+Price}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет теоретической цены опциона \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_af21db2ddf15da30f0c032f2ac05388d9}{calculate\+Delta}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет дельты опциона \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_a27b329d5a05676fe7b4c27063dbfdb24}{calculate\+Gamma}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет гаммы опциона \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classblack__sholes__model_1_1_option_a86bd54ec53e0df69038a5eba7c369d03}{calculate\+Vega}} (\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&bs) const =0
+\begin{DoxyCompactList}\small\item\em Расчет веги опциона \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classblack__sholes__model_1_1_option_acfce2f0763ca80ef489c63a759b8ddb6}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Получение типа опциона \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактный базовый класс для опционов 
+
+Определяет интерфейс для расчета цен и греков различных типов опционов. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classblack__sholes__model_1_1_option_a51f3fed10ba5385a52a7843ae8351a28}\label{classblack__sholes__model_1_1_option_a51f3fed10ba5385a52a7843ae8351a28} 
+\index{black\_sholes\_model::Option@{black\_sholes\_model::Option}!````~Option@{\texorpdfstring{$\sim$}{\string~}Option}}
+\index{````~Option@{\texorpdfstring{$\sim$}{\string~}Option}!black\_sholes\_model::Option@{black\_sholes\_model::Option}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Option()}{\string~Option()}}
+{\footnotesize\ttfamily virtual black\+\_\+sholes\+\_\+model\+::\+Option\+::\texorpdfstring{$\sim$}{\string~}\+Option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classblack__sholes__model_1_1_option_af21db2ddf15da30f0c032f2ac05388d9}\label{classblack__sholes__model_1_1_option_af21db2ddf15da30f0c032f2ac05388d9} 
+\index{black\_sholes\_model::Option@{black\_sholes\_model::Option}!calculateDelta@{calculateDelta}}
+\index{calculateDelta@{calculateDelta}!black\_sholes\_model::Option@{black\_sholes\_model::Option}}
+\doxysubsubsection{\texorpdfstring{calculateDelta()}{calculateDelta()}}
+{\footnotesize\ttfamily virtual double black\+\_\+sholes\+\_\+model\+::\+Option\+::calculate\+Delta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&}]{bs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Расчет дельты опциона 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bs} & Модель Блэка-\/Шоулза \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Значение дельты 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_option_call_acdeb53c95c9597bda43a952b4098d44f}{black\+\_\+sholes\+\_\+model\+::\+Option\+Call}}, and \mbox{\hyperlink{classblack__sholes__model_1_1_option_put_aa8912da8df71991061790db54ae2946d}{black\+\_\+sholes\+\_\+model\+::\+Option\+Put}}.
+
+\Hypertarget{classblack__sholes__model_1_1_option_a27b329d5a05676fe7b4c27063dbfdb24}\label{classblack__sholes__model_1_1_option_a27b329d5a05676fe7b4c27063dbfdb24} 
+\index{black\_sholes\_model::Option@{black\_sholes\_model::Option}!calculateGamma@{calculateGamma}}
+\index{calculateGamma@{calculateGamma}!black\_sholes\_model::Option@{black\_sholes\_model::Option}}
+\doxysubsubsection{\texorpdfstring{calculateGamma()}{calculateGamma()}}
+{\footnotesize\ttfamily virtual double black\+\_\+sholes\+\_\+model\+::\+Option\+::calculate\+Gamma (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&}]{bs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Расчет гаммы опциона 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bs} & Модель Блэка-\/Шоулза \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Значение гаммы 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_option_call_a29709b890c2db1d902f5394afe0713f2}{black\+\_\+sholes\+\_\+model\+::\+Option\+Call}}, and \mbox{\hyperlink{classblack__sholes__model_1_1_option_put_afc8f9a90a42e81310d951cef5c08024e}{black\+\_\+sholes\+\_\+model\+::\+Option\+Put}}.
+
+\Hypertarget{classblack__sholes__model_1_1_option_a77137d63e5cfd658acf7b495a737eb0d}\label{classblack__sholes__model_1_1_option_a77137d63e5cfd658acf7b495a737eb0d} 
+\index{black\_sholes\_model::Option@{black\_sholes\_model::Option}!calculatePrice@{calculatePrice}}
+\index{calculatePrice@{calculatePrice}!black\_sholes\_model::Option@{black\_sholes\_model::Option}}
+\doxysubsubsection{\texorpdfstring{calculatePrice()}{calculatePrice()}}
+{\footnotesize\ttfamily virtual double black\+\_\+sholes\+\_\+model\+::\+Option\+::calculate\+Price (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&}]{bs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Расчет теоретической цены опциона 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bs} & Модель Блэка-\/Шоулза \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Теоретическая цена опциона 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_option_call_afb80508591e5be536753079998c0c7d6}{black\+\_\+sholes\+\_\+model\+::\+Option\+Call}}, \mbox{\hyperlink{classblack__sholes__model_1_1_option_put_a4fae8cac0725aac69f3ee4dacceb8606}{black\+\_\+sholes\+\_\+model\+::\+Option\+Put}}, and \mbox{\hyperlink{classblack__sholes__model_1_1_barrier_option_a52f9031ff3cb58599128525fa65b7f25}{black\+\_\+sholes\+\_\+model\+::\+Barrier\+Option}}.
+
+\Hypertarget{classblack__sholes__model_1_1_option_a86bd54ec53e0df69038a5eba7c369d03}\label{classblack__sholes__model_1_1_option_a86bd54ec53e0df69038a5eba7c369d03} 
+\index{black\_sholes\_model::Option@{black\_sholes\_model::Option}!calculateVega@{calculateVega}}
+\index{calculateVega@{calculateVega}!black\_sholes\_model::Option@{black\_sholes\_model::Option}}
+\doxysubsubsection{\texorpdfstring{calculateVega()}{calculateVega()}}
+{\footnotesize\ttfamily virtual double black\+\_\+sholes\+\_\+model\+::\+Option\+::calculate\+Vega (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack__sholes__model_1_1_black_scholes_model}{Black\+Scholes\+Model}} \&}]{bs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Расчет веги опциона 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bs} & Модель Блэка-\/Шоулза \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Значение веги 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_option_call_a86eb0e68af1be855abff1efe9ec224f3}{black\+\_\+sholes\+\_\+model\+::\+Option\+Call}}, and \mbox{\hyperlink{classblack__sholes__model_1_1_option_put_aae6b8356787a12b8ebc50cc87f062710}{black\+\_\+sholes\+\_\+model\+::\+Option\+Put}}.
+
+\Hypertarget{classblack__sholes__model_1_1_option_acfce2f0763ca80ef489c63a759b8ddb6}\label{classblack__sholes__model_1_1_option_acfce2f0763ca80ef489c63a759b8ddb6} 
+\index{black\_sholes\_model::Option@{black\_sholes\_model::Option}!getType@{getType}}
+\index{getType@{getType}!black\_sholes\_model::Option@{black\_sholes\_model::Option}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual std\+::string black\+\_\+sholes\+\_\+model\+::\+Option\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Получение типа опциона 
+
+\begin{DoxyReturn}{Returns}
+Строка с типом опциона 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classblack__sholes__model_1_1_option_call_a6279f5ca68906d2a01b1aa2f518e1744}{black\+\_\+sholes\+\_\+model\+::\+Option\+Call}}, \mbox{\hyperlink{classblack__sholes__model_1_1_option_put_af0ad550b51469afc9c52b54318afa629}{black\+\_\+sholes\+\_\+model\+::\+Option\+Put}}, and \mbox{\hyperlink{classblack__sholes__model_1_1_barrier_option_acd42eed602c5fc162ff78a04aebdc077}{black\+\_\+sholes\+\_\+model\+::\+Barrier\+Option}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Option Pricer/include/models/\mbox{\hyperlink{black__sholes_8hpp}{black\+\_\+sholes.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+\doxysection{market\+\_\+data.\+hpp}
+\hypertarget{market__data_8hpp_source}{}\label{market__data_8hpp_source}\index{C:/Option Pricer/include/market/market\_data.hpp@{C:/Option Pricer/include/market/market\_data.hpp}}
+\mbox{\hyperlink{market__data_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ include/market/market\_data.hpp}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_market_data}{MarketData}}\ }
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_market_data_ad74495848533737019ec5461e1421aae}{ticker}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_market_data_a7b123b1a78f54adb0d1ef9f83e3cdd08}{spotPrice}};\ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_market_data_a07313196663aeacb552aa6ee2e2b81ba}{strike}};\ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_market_data_a65dd45469a0016e803ce8473ee9a39b6}{timeToExpiration}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_market_data_a559b152a3d991285ac0e9e38fdeb5950}{marketPrice}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_market_data_adb22cdb732bcc1d49c4e5c52aa1eb42b}{riskFreeRate}};\ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_market_data_a86500b032a77585d010289be62a03cec}{optionType}};\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_market_data_aed7cef7dd560f28f6e8f0099d2fb7561}{MarketData}}():\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_market_data_a7b123b1a78f54adb0d1ef9f83e3cdd08}{spotPrice}}(0.0),\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_market_data_a07313196663aeacb552aa6ee2e2b81ba}{strike}}(0.0),\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{struct_market_data_a65dd45469a0016e803ce8473ee9a39b6}{timeToExpiration}}(0.0),\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{struct_market_data_a559b152a3d991285ac0e9e38fdeb5950}{marketPrice}}(0.0),\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_market_data_adb22cdb732bcc1d49c4e5c52aa1eb42b}{riskFreeRate}}(0.0)\ }
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_market_data_loader}{MarketDataLoader}}\ }
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_market_data}{MarketData}}\ \mbox{\hyperlink{class_market_data_loader_aff3e202d2a068749a77e84d00ee861b2}{loadFromCSV}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ =\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_market_data}{MarketData}}\ \mbox{\hyperlink{class_market_data_loader_a9348ae038f6176e5f07d9e73749c19ae}{loadFromAPI}}(\textcolor{keyword}{const}\ std::string\&\ symbol)\ =\ 0;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_market_data}{MarketData}}\ \mbox{\hyperlink{class_market_data_loader_acd4a51c33832178171065cb01fe6ed69}{loadManualInput}}()\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_market_data_loader_a3483ae8df0902bb929bd205e239ff12e}{validateMarketData}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_market_data}{MarketData}}\&\ data);}
+\DoxyCodeLine{00076\ \};}
+
+\end{DoxyCode}
