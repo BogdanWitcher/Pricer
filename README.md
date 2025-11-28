@@ -2,7 +2,6 @@
 
 ![C++](https://img.shields.io/badge/C++-17-blue.svg)
 ![CMake](https://img.shields.io/badge/CMake-3.15+-green.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Platform](https://img.shields.io/badge/Platform-Linux%20|%20Windows%20|%20macOS-lightgrey.svg)
 
 **Профессиональная C++ библиотека для оценки финансовых опционов и анализа рисков**
